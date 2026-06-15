@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+<defs><linearGradient id="bg5" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87CEEB"/><stop offset="60%" stop-color="#98D8C8"/><stop offset="100%" stop-color="#7CB9A0"/></linearGradient>
+<linearGradient id="pipe5" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#e67e22"/><stop offset="30%" stop-color="#f39c12"/><stop offset="70%" stop-color="#e67e22"/><stop offset="100%" stop-color="#d35400"/></linearGradient></defs>
+<rect width="800" height="500" fill="url(#bg5)"/>
+<!-- Ground terrain -->
+<path d="M0 350 Q100 330 200 345 Q300 360 400 340 Q500 320 600 350 Q700 370 800 355 L800 500 L0 500Z" fill="#6B8E23"/>
+<path d="M0 370 Q100 355 200 365 Q300 375 400 358 Q500 340 600 368 Q700 385 800 372 L800 500 L0 500Z" fill="#556B2F"/>
+<!-- Pipeline main horizontal -->
+<ellipse cx="0" cy="280" rx="20" ry="50" fill="#d35400"/>
+<rect x="0" y="230" width="800" height="100" fill="url(#pipe5)"/>
+<ellipse cx="800" cy="280" rx="20" ry="50" fill="#d35400"/>
+<!-- Pipeline top highlight -->
+<rect x="0" y="236" width="800" height="20" fill="rgba(255,255,255,0.15)"/>
+<!-- Support structures -->
+<rect x="120" y="320" width="20" height="100" fill="#7f8c8d"/>
+<rect x="100" y="316" width="60" height="14" rx="4" fill="#95a5a6"/>
+<rect x="290" y="310" width="20" height="110" fill="#7f8c8d"/>
+<rect x="270" y="306" width="60" height="14" rx="4" fill="#95a5a6"/>
+<rect x="460" y="320" width="20" height="100" fill="#7f8c8d"/>
+<rect x="440" y="316" width="60" height="14" rx="4" fill="#95a5a6"/>
+<rect x="630" y="308" width="20" height="112" fill="#7f8c8d"/>
+<rect x="610" y="304" width="60" height="14" rx="4" fill="#95a5a6"/>
+<!-- Valve stations -->
+<rect x="350" y="218" width="100" height="124" rx="8" fill="#2c3e50"/>
+<circle cx="400" cy="232" r="18" fill="#e74c3c"/>
+<rect x="365" y="250" width="70" height="70" rx="4" fill="#34495e"/>
+<circle cx="380" cy="285" r="10" fill="#e67e22"/>
+<circle cx="420" cy="285" r="10" fill="#e67e22"/>
+<!-- Valve wheel -->
+<circle cx="400" cy="232" r="15" fill="none" stroke="#c0392b" stroke-width="4"/>
+<line x1="400" y1="217" x2="400" y2="247" stroke="#c0392b" stroke-width="3"/>
+<line x1="385" y1="232" x2="415" y2="232" stroke="#c0392b" stroke-width="3"/>
+<!-- Pipe flange joints -->
+<rect x="70" y="228" width="12" height="104" rx="3" fill="#95a5a6"/>
+<rect x="200" y="228" width="12" height="104" rx="3" fill="#95a5a6"/>
+<rect x="580" y="228" width="12" height="104" rx="3" fill="#95a5a6"/>
+<rect x="720" y="228" width="12" height="104" rx="3" fill="#95a5a6"/>
+<!-- Direction arrows -->
+<text x="160" y="275" font-family="Arial" font-size="30" fill="rgba(255,255,255,0.4)">→</text>
+<text x="490" y="275" font-family="Arial" font-size="30" fill="rgba(255,255,255,0.4)">→</text>
+<!-- Warning markers -->
+<rect x="148" y="195" width="50" height="35" rx="4" fill="#f39c12"/>
+<text x="173" y="217" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="bold" fill="#2c3e50">PIPELINE</text>
+<!-- Caption -->
+<text x="400" y="455" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="#1a3a2a">HIGH-PRESSURE CRUDE OIL PIPELINE</text>
+<text x="400" y="478" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#2c5040">36" Diameter • 1,200 PSI Rated • Carbon Steel • 80km Section</text>
+</svg>

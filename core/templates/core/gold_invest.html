@@ -1,0 +1,153 @@
+{% extends 'core/dashboard_base.html' %}
+{% block page_title %}Invest in Gold{% endblock %}
+{% block page_subtitle %}Earn 10–22% annual returns backed by real gold reserves{% endblock %}
+
+{% block sidebar_nav %}
+<a href="{% url 'dashboard' %}" class="sidebar-link"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>Overview</a>
+<a href="{% url 'my_rentals' %}" class="sidebar-link"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>My Rentals</a>
+<a href="{% url 'deposit' %}" class="sidebar-link"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>Deposit</a>
+<a href="/equipment/?type=invest" class="sidebar-link"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>Oil & Gas Invest</a>
+<a href="{% url 'gold_invest' %}" class="sidebar-link active"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 8v1m0-9a9 9 0 110 18A9 9 0 0112 3z"/></svg>Gold Invest</a>
+<a href="{% url 'withdraw' %}" class="sidebar-link"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Withdraw</a>
+<a href="{% url 'transactions' %}" class="sidebar-link"><svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>Transactions</a>
+{% endblock %}
+
+{% block content %}
+{% load custom_filters %}
+<div class="max-w-6xl mx-auto">
+
+  <!-- Hero Banner -->
+  <div class="rounded-2xl p-8 mb-10 relative overflow-hidden" style="background:linear-gradient(135deg,#78350F 0%,#92400E 40%,#B45309 100%);">
+    <div style="position:absolute;top:-40px;right:-40px;width:220px;height:220px;border-radius:50%;background:rgba(251,191,36,0.12);"></div>
+    <div style="position:absolute;bottom:-30px;left:200px;width:140px;height:140px;border-radius:50%;background:rgba(251,191,36,0.08);"></div>
+    <div class="relative z-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+      <div>
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:rgba(251,191,36,0.2);border:1.5px solid rgba(251,191,36,0.3);">
+            <svg class="w-7 h-7" style="color:#FCD34D;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 8v1m0-9a9 9 0 110 18A9 9 0 0112 3z"/></svg>
+          </div>
+          <span class="text-xs font-bold tracking-widest uppercase" style="color:#FCD34D;font-family:'DM Sans',sans-serif;">Gold Investment Program</span>
+        </div>
+        <h1 class="font-display text-3xl sm:text-4xl font-bold text-white mb-2">Invest in Gold Markets</h1>
+        <p class="text-amber-200 text-sm sm:text-base" style="font-family:'DM Sans',sans-serif;">Earn 10–22% annual returns backed by certified gold reserves. Professionally managed, secure, and transparent.</p>
+      </div>
+      <div class="flex flex-col items-end gap-2 flex-shrink-0">
+        <div class="text-right">
+          <p class="text-amber-300 text-xs font-bold tracking-widest mb-0.5" style="font-family:'DM Sans',sans-serif;">YOUR BALANCE</p>
+          <div class="font-display text-3xl font-bold text-white">${{ profile.balance|currency }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trust indicators -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
+    {% for item in "1234" %}
+    <div class="card-dark rounded-xl p-4 text-center">
+      <div class="font-display text-2xl font-bold mb-1" style="color:{% cycle '#FCD34D' '#FCD34D' '#22C55E' '#3B82F6' %};">
+        {% cycle '22%' '90' 'ISO' 'AAA' %}
+      </div>
+      <div class="text-xs" style="color:#64748B;font-family:'DM Sans',sans-serif;">{% cycle 'Max Annual ROI' 'Day Max Lock' 'Certified Vaults' 'Credit Rating' %}</div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Investment Plans -->
+  <h2 class="font-display text-2xl font-bold mb-6" style="color:#F1F5F9;">Choose Your Gold Investment Plan</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+    {% for plan in gold_plans %}
+    <div class="rounded-2xl overflow-hidden border transition-all hover:-translate-y-1 hover:shadow-2xl {% if plan.featured %}ring-2{% endif %}"
+         style="background:#1E293B;border-color:{% if plan.featured %}#F59E0B{% else %}rgba(255,255,255,0.07){% endif %};{% if plan.featured %}ring-color:#F59E0B;box-shadow:0 0 30px rgba(245,158,11,0.15);{% endif %}">
+      {% if plan.featured %}
+      <div class="py-2 text-center text-xs font-bold tracking-widest uppercase" style="background:linear-gradient(90deg,#B45309,#D97706,#B45309);color:#FEF3C7;font-family:'DM Sans',sans-serif;">
+        ⭐ MOST POPULAR
+      </div>
+      {% endif %}
+      <div class="p-8">
+        <!-- Plan icon & name -->
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:rgba(251,191,36,0.12);border:1px solid rgba(251,191,36,0.25);">
+            <svg class="w-5 h-5" style="color:#FCD34D;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 8v1m0-9a9 9 0 110 18A9 9 0 0112 3z"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-bold text-white">{{ plan.name }}</h3>
+        </div>
+        <!-- ROI -->
+        <div class="text-center mb-6 py-5 rounded-xl" style="background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.12);">
+          <div class="font-display font-bold leading-none mb-1" style="font-size:3.5rem;color:#FCD34D;">{{ plan.roi }}<span class="text-2xl">%</span></div>
+          <div class="text-xs font-semibold tracking-widest uppercase" style="color:#92400E;font-family:'DM Sans',sans-serif;">Annual Return</div>
+        </div>
+        <!-- Details -->
+        <div class="space-y-3 mb-6 text-sm" style="font-family:'DM Sans',sans-serif;">
+          <div class="flex justify-between items-center py-2" style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <span style="color:#94A3B8;">Min Investment</span>
+            <span class="font-bold text-white">${{ plan.min }}</span>
+          </div>
+          <div class="flex justify-between items-center py-2" style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <span style="color:#94A3B8;">Max Investment</span>
+            <span class="font-bold text-white">${{ plan.max }}</span>
+          </div>
+          <div class="flex justify-between items-center py-2" style="border-bottom:1px solid rgba(255,255,255,0.05);">
+            <span style="color:#94A3B8;">Lock Period</span>
+            <span class="font-bold text-white">{{ plan.lock }} days</span>
+          </div>
+          <div class="flex justify-between items-center py-2">
+            <span style="color:#94A3B8;">Payout Schedule</span>
+            <span class="font-bold" style="color:#22C55E;">{{ plan.payout }}</span>
+          </div>
+        </div>
+        <!-- Perks -->
+        <div class="space-y-2 mb-7">
+          {% for perk in plan.perks %}
+          <div class="flex items-start gap-2 text-xs" style="color:#94A3B8;font-family:'DM Sans',sans-serif;">
+            <svg class="w-4 h-4 flex-shrink-0 mt-0.5" style="color:#F59E0B;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            {{ perk }}
+          </div>
+          {% endfor %}
+        </div>
+        <!-- CTA -->
+        <a href="{% url 'gold_deposit' %}?plan={{ plan.name|lower|cut:' '|cut:'-' }}"
+           class="block w-full py-3.5 text-center text-sm font-bold rounded-xl transition-all"
+           style="{% if plan.featured %}background:linear-gradient(135deg,#D97706,#F59E0B);color:#fff;{% else %}background:rgba(251,191,36,0.1);color:#FCD34D;border:1.5px solid rgba(251,191,36,0.3);{% endif %}font-family:'DM Sans',sans-serif;">
+          Invest Now — {{ plan.name }}
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- How Gold Investment Works -->
+  <div class="card-dark rounded-2xl p-8 mb-8">
+    <h3 class="font-display text-xl font-bold mb-6" style="color:#F1F5F9;">How Gold Investment Works</h3>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+      {% for step in "1234" %}
+      <div class="text-center">
+        <div class="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4" style="background:rgba(251,191,36,0.1);border:2px solid rgba(251,191,36,0.3);">
+          <span class="font-display font-bold text-lg" style="color:#FCD34D;">0{{ forloop.counter }}</span>
+        </div>
+        <h4 class="font-semibold text-white text-sm mb-1" style="font-family:'DM Sans',sans-serif;">{% cycle 'Choose a Plan' 'Fund via Crypto' 'We Manage Gold' 'Earn Returns' %}</h4>
+        <p class="text-xs" style="color:#64748B;font-family:'DM Sans',sans-serif;">{% cycle 'Select the plan that fits your investment goals.' 'Deposit securely via Bitcoin, USDT, ETH or SOL.' 'Our experts allocate and manage gold reserves.' 'Monthly returns paid directly to your balance.' %}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Why Gold -->
+  <div class="card-dark rounded-2xl p-8">
+    <h3 class="font-display text-xl font-bold mb-6" style="color:#F1F5F9;">Why Invest in Gold?</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+      {% for i in "123" %}
+      <div class="rounded-xl p-5" style="background:rgba(251,191,36,0.05);border:1px solid rgba(251,191,36,0.1);">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-4" style="background:rgba(251,191,36,0.15);">
+          <svg class="w-5 h-5" style="color:#FCD34D;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {% cycle '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>' '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>' '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>' %}
+          </svg>
+        </div>
+        <h4 class="font-bold text-white text-sm mb-2" style="font-family:'DM Sans',sans-serif;">{% cycle 'Safe Haven Asset' 'Proven Track Record' 'Global Demand' %}</h4>
+        <p class="text-xs leading-relaxed" style="color:#94A3B8;font-family:'DM Sans',sans-serif;">{% cycle 'Gold historically retains value during market downturns and economic uncertainty.' 'Gold has delivered consistent returns for investors over centuries of market cycles.' 'Gold demand from central banks and industry continues to grow year over year.' %}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+{% endblock %}

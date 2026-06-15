@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+<defs><linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1a1a2e"/><stop offset="60%" stop-color="#16213e"/><stop offset="100%" stop-color="#0f3460"/></linearGradient>
+<linearGradient id="road" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2c2c2c"/><stop offset="100%" stop-color="#1a1a1a"/></linearGradient>
+<linearGradient id="tank2" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c0392b"/><stop offset="50%" stop-color="#e74c3c"/><stop offset="100%" stop-color="#c0392b"/></linearGradient></defs>
+<rect width="800" height="500" fill="url(#bg2)"/>
+<!-- Road -->
+<rect x="0" y="380" width="800" height="120" fill="url(#road)"/>
+<rect x="0" y="378" width="800" height="6" fill="#f39c12" opacity="0.6"/>
+<!-- Road markings -->
+<rect x="60" y="418" width="80" height="8" rx="4" fill="rgba(255,255,255,0.4)"/>
+<rect x="220" y="418" width="80" height="8" rx="4" fill="rgba(255,255,255,0.4)"/>
+<rect x="380" y="418" width="80" height="8" rx="4" fill="rgba(255,255,255,0.4)"/>
+<rect x="540" y="418" width="80" height="8" rx="4" fill="rgba(255,255,255,0.4)"/>
+<rect x="660" y="418" width="80" height="8" rx="4" fill="rgba(255,255,255,0.4)"/>
+<!-- Cab -->
+<rect x="80" y="260" width="160" height="125" rx="12" fill="#2c3e50"/>
+<rect x="85" y="265" width="150" height="80" rx="8" fill="#1a252f"/>
+<!-- Windshield -->
+<rect x="95" y="272" width="130" height="65" rx="6" fill="#3498db" opacity="0.7"/>
+<line x1="160" y1="272" x2="160" y2="337" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+<!-- Cab lights -->
+<rect x="88" y="340" width="28" height="18" rx="3" fill="#f39c12"/>
+<rect x="124" y="340" width="28" height="18" rx="3" fill="#e74c3c"/>
+<rect x="172" y="340" width="28" height="18" rx="3" fill="#e74c3c"/>
+<!-- Exhaust stacks -->
+<rect x="95" y="215" width="14" height="50" rx="4" fill="#7f8c8d"/>
+<rect x="115" y="220" width="14" height="45" rx="4" fill="#7f8c8d"/>
+<circle cx="102" cy="212" r="9" fill="#636e72" opacity="0.5"/>
+<circle cx="122" cy="217" r="8" fill="#636e72" opacity="0.4"/>
+<!-- Tank trailer -->
+<ellipse cx="280" cy="305" rx="25" ry="70" fill="url(#tank2)"/>
+<rect x="280" y="235" width="400" height="140" fill="url(#tank2)"/>
+<ellipse cx="680" cy="305" rx="25" ry="70" fill="url(#tank2)"/>
+<!-- Tank ribs -->
+<rect x="340" y="238" width="8" height="134" rx="4" fill="rgba(0,0,0,0.2)"/>
+<rect x="420" y="238" width="8" height="134" rx="4" fill="rgba(0,0,0,0.2)"/>
+<rect x="500" y="238" width="8" height="134" rx="4" fill="rgba(0,0,0,0.2)"/>
+<rect x="580" y="238" width="8" height="134" rx="4" fill="rgba(0,0,0,0.2)"/>
+<rect x="620" y="238" width="8" height="134" rx="4" fill="rgba(0,0,0,0.2)"/>
+<!-- Tank highlight -->
+<rect x="280" y="244" width="400" height="20" fill="rgba(255,255,255,0.12)"/>
+<!-- Safety stripe -->
+<rect x="280" y="355" width="400" height="14" fill="#f39c12" opacity="0.9"/>
+<rect x="292" y="355" width="14" height="14" fill="#2c3e50"/>
+<rect x="320" y="355" width="14" height="14" fill="#2c3e50"/>
+<rect x="348" y="355" width="14" height="14" fill="#2c3e50"/>
+<rect x="376" y="355" width="14" height="14" fill="#2c3e50"/>
+<rect x="404" y="355" width="14" height="14" fill="#2c3e50"/>
+<rect x="432" y="355" width="14" height="14" fill="#2c3e50"/>
+<rect x="460" y="355" width="14" height="14" fill="#2c3e50"/>
+<rect x="488" y="355" width="14" height="14" fill="#2c3e50"/>
+<rect x="516" y="355" width="14" height="14" fill="#2c3e50"/>
+<rect x="544" y="355" width="14" height="14" fill="#2c3e50"/>
+<rect x="572" y="355" width="14" height="14" fill="#2c3e50"/>
+<rect x="640" y="355" width="14" height="14" fill="#2c3e50"/>
+<!-- Wheels -->
+<circle cx="140" cy="385" r="30" fill="#1a1a1a"/><circle cx="140" cy="385" r="18" fill="#34495e"/><circle cx="140" cy="385" r="8" fill="#7f8c8d"/>
+<circle cx="200" cy="385" r="30" fill="#1a1a1a"/><circle cx="200" cy="385" r="18" fill="#34495e"/><circle cx="200" cy="385" r="8" fill="#7f8c8d"/>
+<circle cx="380" cy="385" r="30" fill="#1a1a1a"/><circle cx="380" cy="385" r="18" fill="#34495e"/><circle cx="380" cy="385" r="8" fill="#7f8c8d"/>
+<circle cx="440" cy="385" r="30" fill="#1a1a1a"/><circle cx="440" cy="385" r="18" fill="#34495e"/><circle cx="440" cy="385" r="8" fill="#7f8c8d"/>
+<circle cx="580" cy="385" r="30" fill="#1a1a1a"/><circle cx="580" cy="385" r="18" fill="#34495e"/><circle cx="580" cy="385" r="8" fill="#7f8c8d"/>
+<circle cx="640" cy="385" r="30" fill="#1a1a1a"/><circle cx="640" cy="385" r="18" fill="#34495e"/><circle cx="640" cy="385" r="8" fill="#7f8c8d"/>
+<!-- PETROLEUM text on tank -->
+<text x="480" y="315" text-anchor="middle" font-family="Arial,sans-serif" font-size="22" font-weight="bold" fill="rgba(255,255,255,0.9)" letter-spacing="4">PETROLEUM</text>
+<!-- Caption -->
+<text x="400" y="460" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="rgba(255,255,255,0.9)">PETROLEUM TANKER TRUCK</text>
+<text x="400" y="480" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="rgba(255,255,255,0.55)">45,000L Capacity • ADR Certified • GPS Tracked</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+<defs>
+<linearGradient id="bgequip09" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0%" stop-color="#1a1a2e"/>
+  <stop offset="100%" stop-color="#000006"/>
+</linearGradient>
+<linearGradient id="accequip09" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#3498db"/>
+  <stop offset="100%" stop-color="#0c70b3"/>
+</linearGradient>
+</defs>
+<rect width="800" height="500" fill="url(#bgequip09)"/>
+<!-- Grid pattern background -->
+<g opacity="0.04">
+  <line x1="0" y1="0" x2="0" y2="500" stroke="white" stroke-width="1"/><line x1="40" y1="0" x2="40" y2="500" stroke="white" stroke-width="1"/><line x1="80" y1="0" x2="80" y2="500" stroke="white" stroke-width="1"/><line x1="120" y1="0" x2="120" y2="500" stroke="white" stroke-width="1"/><line x1="160" y1="0" x2="160" y2="500" stroke="white" stroke-width="1"/><line x1="200" y1="0" x2="200" y2="500" stroke="white" stroke-width="1"/><line x1="240" y1="0" x2="240" y2="500" stroke="white" stroke-width="1"/><line x1="280" y1="0" x2="280" y2="500" stroke="white" stroke-width="1"/><line x1="320" y1="0" x2="320" y2="500" stroke="white" stroke-width="1"/><line x1="360" y1="0" x2="360" y2="500" stroke="white" stroke-width="1"/><line x1="400" y1="0" x2="400" y2="500" stroke="white" stroke-width="1"/><line x1="440" y1="0" x2="440" y2="500" stroke="white" stroke-width="1"/><line x1="480" y1="0" x2="480" y2="500" stroke="white" stroke-width="1"/><line x1="520" y1="0" x2="520" y2="500" stroke="white" stroke-width="1"/><line x1="560" y1="0" x2="560" y2="500" stroke="white" stroke-width="1"/><line x1="600" y1="0" x2="600" y2="500" stroke="white" stroke-width="1"/><line x1="640" y1="0" x2="640" y2="500" stroke="white" stroke-width="1"/><line x1="680" y1="0" x2="680" y2="500" stroke="white" stroke-width="1"/><line x1="720" y1="0" x2="720" y2="500" stroke="white" stroke-width="1"/><line x1="760" y1="0" x2="760" y2="500" stroke="white" stroke-width="1"/>
+  <line x1="0" y1="0" x2="800" y2="0" stroke="white" stroke-width="1"/><line x1="0" y1="40" x2="800" y2="40" stroke="white" stroke-width="1"/><line x1="0" y1="80" x2="800" y2="80" stroke="white" stroke-width="1"/><line x1="0" y1="120" x2="800" y2="120" stroke="white" stroke-width="1"/><line x1="0" y1="160" x2="800" y2="160" stroke="white" stroke-width="1"/><line x1="0" y1="200" x2="800" y2="200" stroke="white" stroke-width="1"/><line x1="0" y1="240" x2="800" y2="240" stroke="white" stroke-width="1"/><line x1="0" y1="280" x2="800" y2="280" stroke="white" stroke-width="1"/><line x1="0" y1="320" x2="800" y2="320" stroke="white" stroke-width="1"/><line x1="0" y1="360" x2="800" y2="360" stroke="white" stroke-width="1"/><line x1="0" y1="400" x2="800" y2="400" stroke="white" stroke-width="1"/><line x1="0" y1="440" x2="800" y2="440" stroke="white" stroke-width="1"/><line x1="0" y1="480" x2="800" y2="480" stroke="white" stroke-width="1"/>
+</g>
+<!-- Large equipment icon / illustration -->
+<rect x="100" y="200" width="160" height="130" rx="12" fill="rgba(255,255,255,0.08)" stroke="#3498db" stroke-width="2"/>
+<rect x="90" y="215" width="130" height="80" rx="6" fill="#3498db" opacity="0.3"/>
+<rect x="260" y="180" width="440" height="150" rx="30" fill="#3498db" opacity="0.8"/>
+<ellipse cx="260" cy="255" rx="30" ry="75" fill="#3498db" opacity="0.9"/>
+<ellipse cx="700" cy="255" rx="30" ry="75" fill="#3498db" opacity="0.9"/>
+<rect x="270" y="188" width="420" height="30" fill="rgba(255,255,255,0.12)"/>
+<circle cx="175" cy="345" r="32" fill="#1a1a1a" stroke="#3498db" stroke-width="3"/>
+<circle cx="175" cy="345" r="18" fill="#34495e"/>
+<circle cx="420" cy="345" r="32" fill="#1a1a1a" stroke="#3498db" stroke-width="3"/>
+<circle cx="420" cy="345" r="18" fill="#34495e"/>
+<circle cx="600" cy="345" r="32" fill="#1a1a1a" stroke="#3498db" stroke-width="3"/>
+<circle cx="600" cy="345" r="18" fill="#34495e"/>
+<!-- Accent bar at bottom -->
+<rect x="0" y="390" width="800" height="6" fill="#3498db"/>
+<!-- Info panel -->
+<rect x="0" y="396" width="800" height="104" fill="rgba(0,0,0,0.45)"/>
+<rect x="40" y="415" width="4" height="50" rx="2" fill="#3498db"/>
+<text x="58" y="438" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="white">TANKER SEMI-TRAILER</text>
+<text x="58" y="460" font-family="Arial,sans-serif" font-size="12" fill="rgba(255,255,255,0.6)">38,000L • Tri-Axle • Aluminum Tank</text>
+<!-- Corner badge -->
+<rect x="620" y="410" width="160" height="70" rx="8" fill="rgba(255,255,255,0.06)" stroke="#3498db" stroke-width="1" stroke-opacity="0.4"/>
+<text x="700" y="440" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#3498db" font-weight="bold">HORDSTAKE</text>
+<text x="700" y="458" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">ENERGY ASSETS</text>
+<text x="700" y="474" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">RENTAL CATALOGUE</text>
+</svg>

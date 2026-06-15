@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+<defs>
+<linearGradient id="bgequip16" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0%" stop-color="#1a252f"/>
+  <stop offset="100%" stop-color="#000007"/>
+</linearGradient>
+<linearGradient id="accequip16" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0%" stop-color="#e74c3c"/>
+  <stop offset="100%" stop-color="#bf2414"/>
+</linearGradient>
+</defs>
+<rect width="800" height="500" fill="url(#bgequip16)"/>
+<!-- Grid pattern background -->
+<g opacity="0.04">
+  <line x1="0" y1="0" x2="0" y2="500" stroke="white" stroke-width="1"/><line x1="40" y1="0" x2="40" y2="500" stroke="white" stroke-width="1"/><line x1="80" y1="0" x2="80" y2="500" stroke="white" stroke-width="1"/><line x1="120" y1="0" x2="120" y2="500" stroke="white" stroke-width="1"/><line x1="160" y1="0" x2="160" y2="500" stroke="white" stroke-width="1"/><line x1="200" y1="0" x2="200" y2="500" stroke="white" stroke-width="1"/><line x1="240" y1="0" x2="240" y2="500" stroke="white" stroke-width="1"/><line x1="280" y1="0" x2="280" y2="500" stroke="white" stroke-width="1"/><line x1="320" y1="0" x2="320" y2="500" stroke="white" stroke-width="1"/><line x1="360" y1="0" x2="360" y2="500" stroke="white" stroke-width="1"/><line x1="400" y1="0" x2="400" y2="500" stroke="white" stroke-width="1"/><line x1="440" y1="0" x2="440" y2="500" stroke="white" stroke-width="1"/><line x1="480" y1="0" x2="480" y2="500" stroke="white" stroke-width="1"/><line x1="520" y1="0" x2="520" y2="500" stroke="white" stroke-width="1"/><line x1="560" y1="0" x2="560" y2="500" stroke="white" stroke-width="1"/><line x1="600" y1="0" x2="600" y2="500" stroke="white" stroke-width="1"/><line x1="640" y1="0" x2="640" y2="500" stroke="white" stroke-width="1"/><line x1="680" y1="0" x2="680" y2="500" stroke="white" stroke-width="1"/><line x1="720" y1="0" x2="720" y2="500" stroke="white" stroke-width="1"/><line x1="760" y1="0" x2="760" y2="500" stroke="white" stroke-width="1"/>
+  <line x1="0" y1="0" x2="800" y2="0" stroke="white" stroke-width="1"/><line x1="0" y1="40" x2="800" y2="40" stroke="white" stroke-width="1"/><line x1="0" y1="80" x2="800" y2="80" stroke="white" stroke-width="1"/><line x1="0" y1="120" x2="800" y2="120" stroke="white" stroke-width="1"/><line x1="0" y1="160" x2="800" y2="160" stroke="white" stroke-width="1"/><line x1="0" y1="200" x2="800" y2="200" stroke="white" stroke-width="1"/><line x1="0" y1="240" x2="800" y2="240" stroke="white" stroke-width="1"/><line x1="0" y1="280" x2="800" y2="280" stroke="white" stroke-width="1"/><line x1="0" y1="320" x2="800" y2="320" stroke="white" stroke-width="1"/><line x1="0" y1="360" x2="800" y2="360" stroke="white" stroke-width="1"/><line x1="0" y1="400" x2="800" y2="400" stroke="white" stroke-width="1"/><line x1="0" y1="440" x2="800" y2="440" stroke="white" stroke-width="1"/><line x1="0" y1="480" x2="800" y2="480" stroke="white" stroke-width="1"/>
+</g>
+<!-- Large equipment icon / illustration -->
+<rect x="340" y="100" width="120" height="270" rx="8" fill="#e74c3c" opacity="0.8"/>
+<rect x="300" y="155" width="200" height="50" rx="6" fill="#e74c3c" opacity="0.6"/>
+<rect x="300" y="235" width="200" height="50" rx="6" fill="#e74c3c" opacity="0.6"/>
+<circle cx="400" cy="100" r="35" fill="none" stroke="#e74c3c" stroke-width="8"/>
+<line x1="400" y1="65" x2="400" y2="100" stroke="#e74c3c" stroke-width="6"/>
+<line x1="370" y1="82" x2="400" y2="100" stroke="#e74c3c" stroke-width="6"/>
+<line x1="430" y1="82" x2="400" y2="100" stroke="#e74c3c" stroke-width="6"/>
+<rect x="370" y="340" width="60" height="30" rx="4" fill="#e74c3c" opacity="0.7"/>
+<rect x="300" y="340" width="60" height="20" rx="4" fill="rgba(255,255,255,0.1)"/>
+<rect x="440" y="340" width="60" height="20" rx="4" fill="rgba(255,255,255,0.1)"/>
+<rect x="340" y="320" width="120" height="25" rx="5" fill="rgba(255,255,255,0.08)" stroke="#e74c3c" stroke-width="2"/>
+<rect x="200" y="170" width="140" height="14" rx="5" fill="rgba(255,255,255,0.08)"/>
+<rect x="460" y="170" width="140" height="14" rx="5" fill="rgba(255,255,255,0.08)"/>
+<!-- Accent bar at bottom -->
+<rect x="0" y="390" width="800" height="6" fill="#e74c3c"/>
+<!-- Info panel -->
+<rect x="0" y="396" width="800" height="104" fill="rgba(0,0,0,0.45)"/>
+<rect x="40" y="415" width="4" height="50" rx="2" fill="#e74c3c"/>
+<text x="58" y="438" font-family="Arial,sans-serif" font-size="20" font-weight="bold" fill="white">CHRISTMAS TREE WELLHEAD</text>
+<text x="58" y="460" font-family="Arial,sans-serif" font-size="12" fill="rgba(255,255,255,0.6)">5,000 PSI • 4-1/16" Bore • API 6A</text>
+<!-- Corner badge -->
+<rect x="620" y="410" width="160" height="70" rx="8" fill="rgba(255,255,255,0.06)" stroke="#e74c3c" stroke-width="1" stroke-opacity="0.4"/>
+<text x="700" y="440" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#e74c3c" font-weight="bold">HORDSTAKE</text>
+<text x="700" y="458" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">ENERGY ASSETS</text>
+<text x="700" y="474" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.4)">RENTAL CATALOGUE</text>
+</svg>

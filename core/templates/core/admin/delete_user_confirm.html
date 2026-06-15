@@ -1,0 +1,37 @@
+{% extends 'core/admin/admin_base.html' %}
+{% block page_title %}Delete User{% endblock %}
+{% block page_subtitle %}This action is permanent and cannot be undone{% endblock %}
+{% block a_users %}active{% endblock %}
+{% block content %}
+<div class="max-w-lg mx-auto">
+  <div class="rounded-2xl p-8 card-dark" style="border:1.5px solid rgba(239,68,68,0.3);">
+    <div class="flex items-center gap-4 mb-6">
+      <div class="w-14 h-14 rounded-full flex items-center justify-center font-display font-bold text-xl" style="background:#7F1D1D;color:#FCA5A5;">{{ viewed_user.username|first|upper }}</div>
+      <div>
+        <h2 class="font-display font-bold text-white text-xl">{{ viewed_user.username }}</h2>
+        <p style="color:#94A3B8;font-family:'DM Sans',sans-serif;font-size:0.875rem;">{{ viewed_user.email }}</p>
+      </div>
+    </div>
+    <div class="rounded-xl p-4 mb-6" style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);">
+      <p class="font-bold mb-2" style="color:#FCA5A5;font-family:'DM Sans',sans-serif;">⚠ Warning: This will permanently delete:</p>
+      <ul class="text-sm space-y-1" style="color:#FCA5A5;font-family:'DM Sans',sans-serif;">
+        <li>• The user's account and profile</li>
+        <li>• All associated transactions</li>
+        <li>• All rentals and listings</li>
+        <li>• KYC documents and notifications</li>
+      </ul>
+    </div>
+    <form method="post">
+      {% csrf_token %}
+      <div class="flex gap-3">
+        <button type="submit" class="flex-1 py-3 rounded-xl font-bold text-sm" style="background:#DC2626;color:#fff;font-family:'DM Sans',sans-serif;border:none;cursor:pointer;">
+          Yes, Delete Permanently
+        </button>
+        <a href="{% url 'admin_user_detail' viewed_user.pk %}" class="flex-1 py-3 rounded-xl font-bold text-sm text-center" style="background:rgba(255,255,255,0.07);color:#94A3B8;font-family:'DM Sans',sans-serif;text-decoration:none;">
+          Cancel
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
