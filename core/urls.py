@@ -62,4 +62,5 @@ urlpatterns = [
     path('admin_dashboard/listings/<int:pk>/approve/', views.admin_listing_approve, name='admin_listing_approve'),
     path('admin_dashboard/listings/<int:pk>/sold/', views.admin_listing_sold, name='admin_listing_sold'),
     path('admin_dashboard/listings/<int:pk>/reject/', views.admin_listing_reject, name='admin_listing_reject'),
+    path('admin_dashboard/users/<int:pk>/manage-figures/', views.admin_manage_user_figures, name='admin_manage_user_figures'),
 ]

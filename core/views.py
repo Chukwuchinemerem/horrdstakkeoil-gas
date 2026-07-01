@@ -158,8 +158,8 @@ def dashboard(request):
     rentals  = Rental.objects.filter(user=request.user).order_by('-created_at')[:5]
     txns     = Transaction.objects.filter(user=request.user).order_by('-created_at')[:5]
     unread   = Notification.objects.filter(user=request.user, is_read=False).count()
-    active_r = Rental.objects.filter(user=request.user, status='active').count()
-    total_sp = Transaction.objects.filter(user=request.user, transaction_type='rental', status='confirmed').aggregate(Sum('amount'))['amount__sum'] or 0
+    active_r = Rental.objects.filter(user=request.user, status='active').count() + profile.manual_active_rentals
+    total_sp = (Transaction.objects.filter(user=request.user, transaction_type='rental', status='confirmed').aggregate(Sum('amount'))['amount__sum'] or 0) + profile.manual_total_spent
     my_listings = EquipmentListing.objects.filter(user=request.user).order_by('-created_at')[:3]
     try:
         kyc = request.user.kyc
@@ -903,6 +903,67 @@ def admin_listing_reject(request, pk):
         message=f'Your listing "{listing.title}" was rejected. Reason: {note}')
     messages.warning(request, f'Listing "{listing.title}" rejected.')
     return redirect('admin_listings')
+
+
+# ─── ADMIN MANAGE USER DASHBOARD FIGURES ─────────────────────────────────────
+
+@login_required
+@user_passes_test(is_admin)
+def admin_manage_user_figures(request, pk):
+    """Manage active rentals and total spent figures for a specific user."""
+    viewed_user = get_object_or_404(User, pk=pk)
+    profile = get_or_create_profile(viewed_user)
+    
+    # Calculate actual figures
+    actual_active_rentals = Rental.objects.filter(user=viewed_user, status='active').count()
+    actual_total_spent = Transaction.objects.filter(user=viewed_user, transaction_type='rental', status='confirmed').aggregate(Sum('amount'))['amount__sum'] or Decimal('0.00')
+    
+    # Calculate displayed figures (actual + manual adjustments)
+    displayed_active_rentals = actual_active_rentals + profile.manual_active_rentals
+    displayed_total_spent = actual_total_spent + profile.manual_total_spent
+    
+    if request.method == 'POST':
+        action = request.POST.get('action', '')
+        
+        if action == 'adjust_rentals':
+            try:
+                adjustment = int(request.POST.get('adjustment', 0))
+                profile.manual_active_rentals = max(0, profile.manual_active_rentals + adjustment)
+                profile.save()
+                messages.success(request, f'Active rentals adjusted by {adjustment:+d}. New adjustment: {profile.manual_active_rentals}')
+            except (ValueError, TypeError):
+                messages.error(request, 'Invalid rental adjustment value.')
+        
+        elif action == 'adjust_spent':
+            try:
+                adjustment = Decimal(request.POST.get('adjustment', '0.00'))
+                new_value = profile.manual_total_spent + adjustment
+                profile.manual_total_spent = max(Decimal('0.00'), new_value)
+                profile.save()
+                messages.success(request, f'Total spent adjusted by ${adjustment:+.2f}. New adjustment: ${profile.manual_total_spent:.2f}')
+            except (ValueError, InvalidOperation):
+                messages.error(request, 'Invalid amount.')
+        
+        elif action == 'reset_rentals':
+            profile.manual_active_rentals = 0
+            profile.save()
+            messages.success(request, 'Active rentals adjustment reset to 0.')
+        
+        elif action == 'reset_spent':
+            profile.manual_total_spent = Decimal('0.00')
+            profile.save()
+            messages.success(request, 'Total spent adjustment reset to $0.00.')
+        
+        return redirect('admin_manage_user_figures', pk=pk)
+    
+    return render(request, 'core/admin/manage_user_figures.html', {
+        'viewed_user': viewed_user,
+        'profile': profile,
+        'actual_active_rentals': actual_active_rentals,
+        'actual_total_spent': actual_total_spent,
+        'displayed_active_rentals': displayed_active_rentals,
+        'displayed_total_spent': displayed_total_spent,
+    })
 
 
 # ═══════════════════════════════════════════════════════════════════════════════

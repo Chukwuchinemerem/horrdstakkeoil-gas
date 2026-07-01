@@ -32,6 +32,7 @@
         <input type="text" name="note" placeholder="Note (optional)" class="w-full rounded-lg px-3 py-2 text-sm mb-1" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:#94A3B8;font-family:'DM Sans',sans-serif;">
       </form>
       <a href="{% url 'admin_notifications' %}?user={{ viewed_user.pk }}" class="btn-outline w-full py-2.5 text-sm block text-center" style="border-color:rgba(255,255,255,0.12);color:#94A3B8;text-decoration:none;">📢 Send Notification</a>
+      <a href="{% url 'admin_manage_user_figures' viewed_user.pk %}" class="w-full py-2.5 text-sm rounded-xl font-bold block text-center" style="background:rgba(168,85,247,0.15);color:#D8B4FE;border:1px solid rgba(168,85,247,0.3);text-decoration:none;font-family:'DM Sans',sans-serif;">📊 Manage Dashboard Figures</a>
       <form method="post" action="{% url 'admin_toggle_user_active' viewed_user.pk %}">
         {% csrf_token %}
         {% if viewed_user.is_active %}

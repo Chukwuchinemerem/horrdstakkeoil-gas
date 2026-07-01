@@ -18,6 +18,9 @@ class UserProfile(models.Model):
     phone = models.CharField(max_length=20, blank=True)
     country = models.CharField(max_length=100, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    # Manual adjustments by admin
+    manual_active_rentals = models.IntegerField(default=0, help_text="Admin adjustment to active rentals count")
+    manual_total_spent = models.DecimalField(max_digits=15, decimal_places=2, default=0.00, help_text="Admin adjustment to total spent amount")
 
     def __str__(self):
         return f"{self.user.username}'s Profile"
